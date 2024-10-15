@@ -1,71 +1,61 @@
-/* Overall page settings */
+/* Global Styles */
 body {
-    background-color: #fff; /* White background */
-    color: #000; /* Black text */
-    font-family: 'Arial', sans-serif; /* Clean, modern sans-serif font */
     margin: 0;
-    padding: 20px;
-    line-height: 1.6; /* Enhance readability */
+    padding: 0;
+    font-family: "Courier New", Courier, monospace; /* Tech look with monospace font */
+    background-color: white; /* White background */
+    color: black; /* Black font */
+    line-height: 1.6;
 }
 
-/* Style for the main heading */
-h1 {
-    color: #000; /* Black heading */
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #000; /* Underline for the title */
-    padding-bottom: 10px;
+/* Headings */
+h1, h2 {
+    font-weight: normal;
+    margin: 20px;
 }
 
-/* Paragraph style */
+/* Paragraphs */
 p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
-/* Links styling */
+/* Links */
 a {
-    color: #000; /* Black links */
+    color: black;
     text-decoration: none;
-    border-bottom: 1px solid #000; /* Underline link with a subtle border */
+    border-bottom: 1px solid black; /* Subtle underline */
+    transition: all 0.3s ease;
 }
 
 a:hover {
-    text-decoration: underline; /* Underline on hover */
+    color: gray; /* Hover effect */
+    border-bottom: 1px solid gray;
 }
 
-/* Sub-heading style */
-h2 {
-    color: #000; /* Black subheading */
-    font-size: 1.8em;
-    margin-top: 30px;
-    border-bottom: 1px solid #000; /* Underline for subheading */
-    padding-bottom: 5px;
-}
-
-/* List styling for process phases */
+/* Lists */
 ul {
-    list-style-type: none; /* Remove bullets */
+    list-style: none;
     padding: 0;
 }
 
 ul li {
-    margin: 10px 0;
+    margin: 10px 20px;
 }
 
+/* Full Width Layout */
+body {
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+/* Ensure the content takes the full screen */
 ul li a {
-    font-size: 1.2em;
-    transition: color 0.3s, border-color 0.3s;
+    display: block;
+    padding: 10px;
+    border-left: 4px solid black;
+    transition: background-color 0.3s ease;
 }
 
 ul li a:hover {
-    color: #444; /* Subtle change in color on hover */
-    border-bottom: 1px solid #444; /* Subtle change in underline on hover */
-}
-
-/* Additional padding and spacing */
-body {
-    max-width: 800px;
-    margin: auto;
-    padding-top: 50px;
+    background-color: #f0f0f0;
 }
