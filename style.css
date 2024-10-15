@@ -1,72 +1,87 @@
-/* General page layout */
+/* Overall page settings */
 body {
-    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for coding look */
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    padding: 20px;
 }
 
-/* Main content container */
-h1, p, ul {
-    width: 80%;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-/* Styling the header */
+/* Style for the main heading */
 h1 {
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 30px;
+    color: #00ff00; /* Neon green to add a techy feel */
     font-size: 2.5em;
+    border-bottom: 2px solid #00ff00; /* Underline for the title */
+    padding-bottom: 10px;
 }
 
-/* Styling the paragraph */
+/* Paragraph style */
 p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #555;
-    text-align: center;
+    margin-bottom: 20px;
+    color: #ccc; /* Softer white for readability */
 }
 
 /* Links styling */
 a {
-    color: #2980b9;
+    color: #00ff00; /* Neon green links */
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Hover effect for links */
 a:hover {
-    color: #3498db;
+    color: #ffffff; /* White when hovered */
     text-decoration: underline;
 }
 
-/* Unordered list styling for links */
+/* Sub-heading style */
+h2 {
+    color: #00ff00;
+    font-size: 1.8em;
+    margin-top: 30px;
+    border-bottom: 1px solid #00ff00;
+    padding-bottom: 5px;
+}
+
+/* List styling for process phases */
 ul {
-    list-style-type: none;
-    text-align: center;
+    list-style-type: none; /* Remove bullets */
     padding: 0;
 }
 
-/* List item styling */
 ul li {
-    display: inline-block;
-    margin: 10px;
+    margin: 10px 0;
 }
 
-/* Button-like styling for the links */
 ul li a {
-    background-color: #2980b9;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    color: #00ff00;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    background-color: #333; /* Dark background for list items */
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover effect for the phase links */
 ul li a:hover {
-    background-color: #3498db;
-    color: white;
+    background-color: #444; /* Slight change on hover */
+    color: #fff;
 }
+
+/* Code-like border and padding for a coding feel */
+code, pre {
+    background-color: #111; /* Slightly lighter black */
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Additional padding and spacing */
+body {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 50px;
+}
+
