@@ -15,14 +15,16 @@
     <!-- Link to other phases -->
     <p><a href="index.html">Back to main page</a></p>
 
-    <!-- Table for displaying CSV data -->
-    <h2>Data Table from CSV</h2>
-    <table id="csvTable" border="1">
-        <thead>
-            <tr id="csvHeader"></tr>
-        </thead>
-        <tbody id="csvBody"></tbody>
-    </table>
+    <!-- Scrollable container for the table -->
+    <div class="table-container">
+        <h2>Data Table from CSV</h2>
+        <table id="csvTable" border="1">
+            <thead>
+                <tr id="csvHeader"></tr>
+            </thead>
+            <tbody id="csvBody"></tbody>
+        </table>
+    </div>
 
     <!-- Script to fetch and parse the CSV file -->
     <script>
@@ -30,7 +32,6 @@
         fetch('./files/20243_phase1_results.csv')
             .then(response => response.text())
             .then(data => {
-                const table = document.getElementById('csvTable');
                 const csvBody = document.getElementById('csvBody');
                 const csvHeader = document.getElementById('csvHeader');
 

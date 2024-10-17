@@ -1,66 +1,121 @@
-/* Global Styles */
+/* General body styling */
 body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif; /* Normal font */
-    background-color: white; /* White background */
-    color: black; /* Black font */
-    line-height: 1.6;
+    padding: 20px;
 }
 
-/* Logo Styles */
-#logo {
+/* Logo styling for top left */
+.logo {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 150px; /* Adjust the size of the logo */
+    width: 100px;
+    height: auto;
 }
 
-/* Headings */
-h1, h2 {
+/* Header styling */
+h1 {
+    font-size: 2em;
     font-weight: normal;
-    margin: 20px;
-    padding-top: 80px; /* Add space for the logo */
+    margin-top: 100px; /* Space for logo */
+    text-align: left;
+    color: black;
 }
 
-/* Paragraphs */
+/* Paragraph styling */
 p {
-    margin: 20px;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    color: black;
 }
 
-/* Links */
+/* Styling for clickable links */
 a {
     color: black;
-    text-decoration: underline; /* Simple underline for clickable links */
-    transition: color 0.3s ease;
+    text-decoration: underline;
 }
 
 a:hover {
-    color: gray; /* Hover effect */
+    color: #555;
 }
 
-/* Lists */
+/* Styling for the list of project phases */
 ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
-ul li {
-    margin: 10px 20px;
+li {
+    padding: 5px 0;
 }
 
-/* Full Width Layout */
-body {
-    max-width: 100%;
-    padding: 0 20px;
-}
-
-/* Ensure the content takes the full screen */
-ul li a {
-    display: block;
+/* Table container for scrollable table */
+.table-container {
+    max-height: 400px; /* Set a maximum height for the table container */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Optional border for clarity */
     padding: 10px;
+    background-color: #f9f9f9; /* Slight background color for contrast */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+/* Make sure table headers are bold */
+th {
+    background-color: #eaeaea;
+    font-weight: bold;
+}
+
+/* Add hover effect to table rows */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style for the entire content to take up full width */
+body {
+    width: 100%;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: black;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Override margin and padding for lists */
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout for links without buttons */
+ul li a {
+    text-decoration: underline;
+    font-size: 1.1em;
+    color: black;
+    display: block;
 }
 
 ul li a:hover {
-    background-color: #f0f0f0; /* Subtle background change on hover */
+    color: #333;
 }
