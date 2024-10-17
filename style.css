@@ -54,34 +54,46 @@ li {
 }
 
 /* Table container for scrollable table */
+/* Table container for scrollable table with frozen header */
 .table-container {
     max-height: 400px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: auto;
     border: 1px solid #ccc;
     padding: 10px;
     background-color: #f9f9f9;
+    position: relative;
 }
 
-/* Table styles */
+/* Styling for the table with a frozen header */
 table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed; /* Makes sure the table takes equal width columns */
 }
 
+/* Freeze the first row (header) */
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #eaeaea;
+    z-index: 1;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Normal cell styles */
 th, td {
     padding: 8px;
     text-align: left;
     border: 1px solid #ccc;
 }
 
-th {
-    background-color: #eaeaea;
-    font-weight: bold;
-}
-
 tr:hover {
     background-color: #f1f1f1;
 }
+
 
 /* Remove extra space for phase1 page */
 .phase1-body {
