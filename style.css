@@ -7,22 +7,23 @@ body {
     padding: 20px;
 }
 
-/* Logo styling for top left */
+/* Logo styling for top left, aligned with title */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 100px;
+    width: 80px;
     height: auto;
 }
 
-/* Header styling */
 h1 {
     font-size: 2em;
     font-weight: normal;
-    margin-top: 100px; /* Space for logo */
-    text-align: left;
     color: black;
+    margin: 0;
 }
 
 /* Paragraph styling */
@@ -54,11 +55,11 @@ li {
 
 /* Table container for scrollable table */
 .table-container {
-    max-height: 400px; /* Set a maximum height for the table container */
-    overflow-y: scroll; /* Enable vertical scrolling */
-    border: 1px solid #ccc; /* Optional border for clarity */
+    max-height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
     padding: 10px;
-    background-color: #f9f9f9; /* Slight background color for contrast */
+    background-color: #f9f9f9;
 }
 
 /* Table styles */
@@ -73,26 +74,18 @@ th, td {
     border: 1px solid #ccc;
 }
 
-/* Make sure table headers are bold */
 th {
     background-color: #eaeaea;
     font-weight: bold;
 }
 
-/* Add hover effect to table rows */
 tr:hover {
     background-color: #f1f1f1;
 }
 
-/* Style for the entire content to take up full width */
-body {
-    width: 100%;
-}
-
-h2 {
-    font-size: 1.5em;
-    font-weight: normal;
-    color: black;
+/* Remove extra space for phase1 page */
+.phase1-body {
+    margin-top: 0;
 }
 
 /* Footer styles */
@@ -100,12 +93,6 @@ footer {
     text-align: center;
     margin-top: 20px;
     color: #555;
-}
-
-/* Override margin and padding for lists */
-ul, li {
-    margin: 0;
-    padding: 0;
 }
 
 /* Layout for links without buttons */

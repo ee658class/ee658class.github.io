@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>20243 EE-658: Phase 1 - Logic Simulator</title>
 </head>
-<body>
+<body class="phase1-body">
     <h1>20243 EE-658: Phase 1 - Logic Simulator</h1>
     <p>
         Welcome to Phase 1 of the project. In this phase, we focus on logic simulation. Below you will find a CSV table containing data for analysis.
@@ -15,9 +15,9 @@
     <!-- Link to other phases -->
     <p><a href="index.html">Back to main page</a></p>
 
-    <!-- Scrollable container for the table -->
+    <!-- Table for displaying CSV data -->
+    <h2>Data Table from CSV</h2>
     <div class="table-container">
-        <h2>Data Table from CSV</h2>
         <table id="csvTable" border="1">
             <thead>
                 <tr id="csvHeader"></tr>
@@ -32,6 +32,7 @@
         fetch('./files/20243_phase1_results.csv')
             .then(response => response.text())
             .then(data => {
+                const table = document.getElementById('csvTable');
                 const csvBody = document.getElementById('csvBody');
                 const csvHeader = document.getElementById('csvHeader');
 
