@@ -4,17 +4,17 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>20243 EE-658: Phase 1 - Logic Simulator</title>
+    <title>20243 EE-658: Phase 2 - Fault Simulator</title>
 </head>
 <body class="phase1-body">
-    <h1>20243 EE-658: Phase 1 - Logic Simulator</h1>
-    <p>Phase 1 - logic simulation</p>
+    <h1>20243 EE-658: Phase 2 - Fault Simulator</h1>
+    <p>Phase 2 - Fault simulation</p>
 
     <!-- Link to other phases -->
     <p><a href="index.html">Back to main page</a></p>
 
     <!-- Table for displaying multiple CSV data -->
-    <h2>Data Table from Multiple CSV Files</h2>
+    <!-- <h2>Data Table from Multiple CSV Files</h2> -->
     <div class="table-container">
         <table id="csvTable" border="1">
             <thead>
@@ -26,7 +26,7 @@
 
     <!-- Script to fetch and parse multiple CSV files -->
     <script>
-        const csvFiles = ['./files/p2-logicsim-ez-report.csv']; //, './files/data2.csv', './files/data3.csv'
+        const csvFiles = ['./files/p2-logicsim-ez-report.csv', './files/p2-dfs-ez-report.csv']; //, './files/data3.csv'
         const csvBody = document.getElementById('csvBody');
         const csvHeader = document.getElementById('csvHeader');
 
