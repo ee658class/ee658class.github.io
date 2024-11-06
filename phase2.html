@@ -5,6 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>20243 EE-658: Phase 2 - Fault Simulator</title>
+    <style>
+        .table-container {
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+            border: 1px solid #ddd;
+            overflow: auto;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body class="phase1-body">
     <h1>20243 EE-658: Phase 2 - Fault Simulator</h1>
@@ -13,63 +26,10 @@
     <!-- Link to other phases -->
     <p><a href="index.html">Back to main page</a></p>
 
-    <!-- Table for displaying multiple CSV data -->
-    <!-- <h2>Data Table from Multiple CSV Files</h2> -->
+    <!-- Container for the Excel file -->
+    <h2>EZ-part</h2>
     <div class="table-container">
-        <table id="csvTable" border="1">
-            <thead>
-                <tr id="csvHeader"></tr>
-            </thead>
-            <tbody id="csvBody"></tbody>
-        </table>
+        <iframe src="files/p2-ez-report.htm"></iframe>
     </div>
-
-    <!-- Script to fetch and parse multiple CSV files -->
-    <script>
-        const csvFiles = ['./files/p2-logicsim-ez-report.csv', './files/p2-dfs-ez-report.csv']; //, './files/data3.csv'
-        const csvBody = document.getElementById('csvBody');
-        const csvHeader = document.getElementById('csvHeader');
-
-        async function loadCSVFiles() {
-            try {
-                for (let i = 0; i < csvFiles.length; i++) {
-                    const response = await fetch(csvFiles[i]);
-                    const data = await response.text();
-                    displayCSV(data, i === 0);
-                }
-            } catch (error) {
-                console.error('Error loading CSV files:', error);
-            }
-        }
-
-        function displayCSV(data, isFirstFile) {
-            const rows = data.trim().split('\n');
-
-            if (isFirstFile) {
-                // Add headers to the table only for the first CSV file
-                const headers = rows[0].split(',');
-                headers.forEach(header => {
-                    let th = document.createElement('th');
-                    th.innerText = header;
-                    csvHeader.appendChild(th);
-                });
-            }
-
-            // Add data rows to the table
-            rows.slice(1).forEach(row => {
-                let tr = document.createElement('tr');
-                const cells = row.split(',');
-                cells.forEach(cell => {
-                    let td = document.createElement('td');
-                    td.innerText = cell;
-                    tr.appendChild(td);
-                });
-                csvBody.appendChild(tr);
-            });
-        }
-
-        // Load all CSV files
-        loadCSVFiles();
-    </script>
 </body>
 </html>
